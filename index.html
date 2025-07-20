@@ -18,6 +18,23 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body class="page-bg text-white">
+    <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const bar = document.createElement("div");
+    bar.id = "topAdBar";
+    bar.innerHTML = `
+      <div class="w-full bg-yellow-300 text-black text-center py-2 px-4 text-sm fixed top-0 left-0 z-50 shadow-md flex justify-between items-center">
+        <div class="text-sm">
+          🎬 热门影片推荐每日更新！<a href="https://example.com" target="_blank" class="underline font-semibold ml-2">点我立即观看</a>
+        </div>
+        <button onclick="document.getElementById('topAdBar').remove();document.body.style.paddingTop='0'" class="ml-4 text-black text-lg font-bold hover:text-gray-600">&times;</button>
+      </div>
+    `;
+    document.body.prepend(bar);
+    document.body.style.paddingTop = "48px"; // 防止页面被广告遮住
+  });
+</script>
+
     <!-- 将历史记录按钮移到左上角，并缩小尺寸 -->
     <div class="fixed top-4 left-4 z-10">
         <button onclick="toggleHistory(event)" class="bg-[#222] hover:bg-[#333] border border-[#333] hover:border-white rounded-lg px-3 py-1.5 transition-colors" aria-label="观看历史">
