@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+
+  <title>麒麟导航</title>
+
+<link rel="shortcut icon" href="http://so.zhangxingqiu.cn/so/byrwiki/favicon.ico">
+
+<meta name="Keywords" content="麒麟导航"/>
+<meta name="Description" content="麒麟导航常用的导航页，随时随地。一个框，全能搜！若打开缓慢，请访问简洁版 http://so.byr.wiki/"/>
+
+
+<link href="static/css/bootstrap.min.css" rel="stylesheet" />x
+<link rel="stylesheet" href="static/css/frontstyle.css">
+<script src="static/js/jquery-3.1.0.min.js"></script>
+<script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+
+<style type="text/css">
+body  {
+background-image:url(static/images/7e124381585247f698dbe2cf5270602c.gif);	
+
+
+/*作者：i@zhangxingqiu.cn
+时间：2016-10-05
+描述：这是本地测试的背景照路径*/
+
+ /*background-image:url(https://api.lylares.com/bing/image/?1366/768/-1);*/
+
+z-index: -1;
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+
+ </style>
+
+
+
+</head>
+
+
+<body>
+
+  
+
+<!--
+	作者：i@zhangxingqiu.cn
+	时间：2016-10-04
+	描述：原来的蓝色背景顶部导航
+-->
+<div class="hidden-xs"> 
+ <ul class="nav nav-tabs navbar-static-top"  role="navigation" >    
+  <div id="header">
+      <a class="LOGO1" href="http://byr.wiki"><img id="zb" src="static/picture/logo7.png"  alt="麒麟导航"></a>
+      <a href="http://xuedaolaoshequ.cn" target="_blank" class="yb">学到老社区-每天都有新发现</a>
+      <a href="http://so.zhangxingqiu.cn/so/liuyan/index.html" target="_blank" class="yb">留言板</a>
+  </div>
+ </ul>
+</div>
+
+
+<div class="container">
+  <!--
+  	作者：i@zhangxingqiu.cn
+  	时间：2016-10-20
+  	描述：仅在屏幕尺寸小于 768px 可见
+  -->
+
+  <div class="visible-xs">
+    <div class="row sLOGO">
+      <div class="col-xs-6 col-xs-offset-3">               
+         <a href="./index.html"><img id="LOGO" src="static/picture/logo7.png"  alt="Responsive image"></a>  
+       <br/>
+      </div>
+    </div>
+  </div>
+       
+  <!--
+  	作者：i@zhangxingqiu.cn
+  	时间：2016-10-20
+  	描述：仅在屏幕尺寸大于 768px 可见
+  -->
+
+  <div class="hidden-xs"> 
+    <div class="row LOGO">
+      <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+        <a href="./index.html"><img id="LOGO" src="static/picture/caise.png"  alt="Responsive image"></a>
+       
+      </div>
+    </div>
+  </div>
+
+
+  <div class="input-group input-group-lg">
+  <span class="input-group-addon">全能搜</span>
+  <form action="http://www.baidu.com/s" method="get" target="_blank" >
+    
+  <input type="text" class="form-control" name="search" id="search" placeholder="先输入关键词，再选择相应的检索平台，即刻检索。默认回车为百度搜索，谷歌搜索需翻墙" baiduSug="2"  value=" " >
+</div>  
+       
+    <P><center>
+    <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
+    <input type="submit" value="N8N" id="google" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="存储桶" id="sougou" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="youtube" id="jd" button type="button" class="btn btn-primary" />
+    <input type="submit" value="Notion密码验证" id="taobao" button type="button" class="btn btn-primary" />
+   <input type="submit" value="Notion视频表单" id="weixin" button type="button" class="btn btn-primary" />
+    <input type="submit" value="Gmail邮箱" id="zhihu" button type="button" class="btn btn-primary" />
+    <input type="submit" value="小霸王" id="weibo" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="超人类创造者" id="douban" button type="button" class="btn btn-primary"/>
+   <input type="submit" value="AI答案编辑器" id="panci" button type="button" class="btn btn-primary"/>
+     <input type="submit" value="Gname域名" id="quzhuanpan" button type="button" class="btn btn-success"/>
+   <input type="submit" value="Cloudflare" id="xueshu" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="openai-ChatGPT" id="ziyuan" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="域名抢注" id="ditu" button type="button" class="btn btn-primary"/>
+    <P><center>
+
+
+  
+   
+  
+  </form>
+
+  
+  <!--
+	作者：i@zhangxingqiu.cn
+	时间：2016-10-04
+	描述：搜索框完
+-->
+  
+       <br>
+       <br>
+     
+ <div class="visible-xs">  
+  <div class="jumbotron">    
+    <p id="zhongjian">输入关键词，再点击下方相应按钮，即可检索，默认为百度搜索！<br>随时随地  Byr.Wiki  记住一个就够了！<br>推荐使用电脑访问，效果更好！<br></p>   
+    </div>
+       
+       
+ </div>
+    <br>
+  	<br>
+ 			
+
+
+
+<div class="container">
+	<table class="table table-responsive  table-striped table-bordered table-hover acitve " >
+		<thead>
+			<tr class="center">
+	    <th id="dingbu" colspan="5" >日常生活类</th>
+      <th id="dingbu" colspan="5" >快捷服务类 </th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr style="background: rgba(45, 43, 43, 0.43);" >
+	      <td align="center" id="fenlei" >购物</td>
+        <td align="center"><a href="https://jianwai.youdao.com/" target="_blank" id="lianjie">网易见外</a></td>
+        <td align="center"><a href="https://zenvideo.qq.com/" target="_blank" id="lianjie">腾讯智播</a></td>
+        <td align="center"><a href="https://xiaojiangjiang.eu.cc/" target="_blank" id="lianjie"><font color="#ff003d">小姜姜影视</a></td>
+        <td align="center"><a href="http://bbs.52jscn.com" target="_blank" id="lianjie">锦尚源码</a></td>
+   <!-- <td align="center"><a href="http://gouwu.hao123.com/" target="_blank">更多</a></td>-->
+        <td align="center"><a href="https://qmuqngs7qt.feishu.cn/sheets/shtcnzH0X3nSaIHSH1qmdhC7MKe" target="_blank" id="lianjie"><font color="#00ffe4">小果视界</a></td>
+        <td align="center"><a href="https://www.ytdownfk.com/search?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DIlCDqcY5O6k&pipeline=0&type=index" target="_blank" id="lianjie1">油管下载</a></td>
+        <td align="center"><a href="https://photokit.com/colors/color-wheel/?lang=zh" target="_blank" id="lianjie"><font color="#321bff">调色器</a></td>
+        <td align="center"><a href="https://speech.microsoft.com/portal/154474a7252e481e83e8a61896966ec5/voicegallery" target="_blank" id="lianjie">微软语音库</a></td>
+        <td align="center"><a href="https://wxw36169t2.feishu.cn/docx/PNFTdX50ioGSwkxQ9JGcWMMdnZe" target="_blank" id="lianjie">短剧项目</a></td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr style="background: rgba(45, 43, 43, 0.43);" >
+        <td align="center" id="fenlei">视频</td>
+        <td align="center"><a href="https://appahc51luh5198.h5.xiaoeknow.com/p/decorate/homepage?share_user_id=u_63eb7be85e0a0_vITG4SHyNv&share_type=5&wework_share_customer_id=u_63eb7be85e0a0_vITG4SHyNv&entry=2&entry_type=2002" target="_blank"  id="lianjie"><font color="#00FF00">赛道学习系统</font></a></td>
+        <td align="center"><a href="https://space.bilibili.com/282457867/#/" target="_blank"  id="lianjie"><font color="#ff33cc">潭州前端课</font></a></td>
+        <td align="center"><a href="http://www.jq22.com/" target="_blank" id="lianjie"><font color="#aa22FF">H5插件库</font></a></td>
+        
+        <td align="center"><a href="https://www.alibabacloud.com/" target="_blank" id="lianjie"><font color="#00FFF0">阿里云国际站</font></a></td>
+    <!--<td align="center"><a href="http://www.hao123.com/video" target="_blank">更多</a></td>-->
+        <td align="center" id="fenlei">邮箱</td>
+        <td align="center"><a href="http://6qvndfa.er1aabnw.top/#/" target="_blank" id="lianjie"><font color="#00FF00">全网业务站</font></a></td>
+        <td align="center"><a href="http://10066.sdgx001.top/" target="_blank" id="lianjie"><font color="#00FF00">赛道资源网</a></td>
+        <td align="center"><a href="https://shangke.app.cloudos.com/my/myClass?fp=642669674526a103173eca02" target="_blank" id="lianjie"><font color="#FF0000">一舟云课堂</font></a></td>
+        <td align="center" id="lianjie"> </td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr style="background: rgba(45, 43, 43, 0.43);" >
+	    <td align="center" id="fenlei">社交</td>
+      <td align="center"><a href="http://blog.sina.com.cn/u/2298754432" target="_blank" id="lianjie1"><font color="#dd4444">博客</font></a></td>
+      <td align="center"><a href="https://www.videofk.com/zh-CN2" target="_blank" id="lianjie">全视频下载</a></td>
+      <td align="center"><a href="https://ai.sociable.vip/" target="_blank" id="lianjie">永久GPT</a></td>
+      
+<!-- <td align="center"><a href="http://www.hao123.com/shequ" target="_blank">更多</a></td>-->
+      <td align="center" id="fenlei">求职</td>
+      <td align="center"><a href="http://editor.wxb.com/" target="_blank" id="lianjie"><font color="#ff33cc">微信编辑器</font></a></td>
+      <td align="center"><a href="https://www.shejibaozang.com/" target="_blank" id="lianjie">设计宝藏</a></td>
+      <td align="center"><a href="http://www.51job.com/" target="_blank" id="lianjie">前程无忧</a></td>
+      <td align="center"><a href="https://b.jimmylv.cn/" target="_blank" id="lianjie">B站终结者</a></td>
+   </tr>
+	</tbody>
+	
+	<tbody>
+		<tr style="background: rgba(45, 43, 43, 0.43);" >
+      <td align="center" id="fenlei">其它</td>
+      <td align="center"><a href="https://tongyi.aliyun.com/" target="_blank"  id="lianjie">阿里通易千问</a></td>
+      <td align="center"><a href="https://yiyan.baidu.com/" target="_blank" id="lianjie">文心一言</a></td>
+      <td align="center"><a href="https://promotion.aliyun.com/ntms/yunparter/personal-center.html#/rebate-order" target="_blank"  id="lianjie"><font color="#aa22FF">云大使VIP</font></a></td>
+      <td align="center"><a href="https://tv.cctv.com/live/cctv1/" target="_blank" id="lianjie">电视直播</a></td>
+  <!--<td align="center"><a href="http://www.hao123.com/video" target="_blank">更多</a></td>-->
+      <td align="center" id="fenlei">追剧</td>
+      <td align="center"><a href="https://gimy.ai/" target="_blank" id="lianjie">电影天堂</a></td>
+      <td align="center"><a href="http://ttmeiju.com/" target="_blank" id="lianjie">天天美剧</a></td>
+      <td align="center"><a href="http://www.allyingshi.com/" target="_blank" id="lianjie1">人人影视</a></td>
+      <td align="center"> </td>
+		</tr>
+	</tbody>	
+		
+	<tbody>
+		<tr style="background: rgba(45, 43, 43, 0.43);" >
+      <td align="center" id="fenlei">AI绘图</td>
+      <td align="center"><a href="https://yige.baidu.com/points" target="_blank"  id="lianjie">文心一格</a></td>
+      <td align="center"><a href="https://artpai.xyz/#/" target="_blank" id="lianjie">PAI智图</a></td>
+      <td align="center"><a href="https://creator.nolibox.com/" target="_blank"  id="lianjie">画宇宙</a></td>
+      <td align="center"><a href="https://www.aiwonder.cn/#" target="_blank" id="lianjie">AI Wonder小程序</a></td>
+      <td align="center"><a href="https://draft.art/" target="_blank" id="fenlei1">draft机器人作图</td>
+      <td align="center"><a href="https://creator.nolibox.com/" target="_blank" id="lianjie"> </a></td>
+      
+      <td align="center"><a href="https://aigc.yizhentv.com/" target="_blank" id="lianjie1">一帧秒创</a></td>
+      <td align="center"><a href="https://bigjpg.com/" target="_blank" id="lianjie1">AI人工智能图片放大</a></td>
+      <td align="center"><a href="https://www.aicangshu.net/#" target="_blank" id="lianjie1">AI仓鼠集合</a></td>
+			</tr>
+		</tbody>
+		
+	<tbody>
+		<tr style="background: rgba(45, 43, 43, 0.43);" >
+      <td align="center" id="fenlei1">推荐</td>
+      <td align="center"><a href="http://www.aies.cn/" target="_blank" id="lianjie">简体字转繁体字</a></td>
+      <td align="center"><a href="https://www.xiaofamao.com/result.php" target="_blank" id="lianjie">小发猫AI+仿写</a></td>      
+      <td align="center"><a href="http://www.tvbwind.net/" target="_blank" id="lianjie">TVB高清</a></td>  
+      <td align="center"><a href="http://www.dvedit.cn/" target="_blank" id="lianjie">视频编辑论坛</a></td>
+      <td align="center"><a href="http://www.ifagou.com/check/index.html?from=login" target="_blank" id="lianjie">爱发狗软文AI洗稿</a></td>
+      <td align="center"><a href="http://www.lookae.com/" target="_blank" id="lianjie">特效插件</a></td>           
+      <td align="center"><a href="https://id-photo.cn/" target="_blank" id="lianjie">证件照</a></td>
+      <td align="center"><a href="https://ai.meibp.com/" target="_blank" id="lianjie1">没帮派伪原创</a></td>
+      <td align="center"><a href="https://www.15201.com/yuyi/" target="_blank" id="lianjie">AI语义仿写</a>--></td>
+      
+  
+		</tr>
+	</tbody>
+</table>
+		
+	
+				
+<!--作者：i@zhangxingqiu.cn
+           时间：2016-10-07
+           描述：这里是根据设备尺寸选择自动隐藏的内容
+                        -->
+<div class="hidden-xs"> 
+     
+		<!--
+    	作者
+    	时间：
+    	描述：
+    -->	
+
+
+
+</div>
+
+
+
+
+
+<table >
+	<table class="table table-striped table-bordered table-hover active" >		
+		<thead>
+			<tr class="active center">
+	      <th id="dingbu" >网站相关</th>
+        <td align="center"><a href="http://so.zhangxingqiu.cn/so/liuyan/index.html" target="_blank"id="lianjie">关于我们</a></td>
+        <td align="center"><a href="https://github.com/byrwiki/byrwiki.github.io" target="_blank"id="lianjie">网站源码</a></td>
+        <td align="center"><a href="https://github.com/byrwiki/byrwiki.github.io/commits/master" target="_blank"id="lianjie1">更新日志</a></td>
+        <td align="center"><a href="http://so.byr.wiki/" target="_blank"id="lianjie">全能搜索</a></td>
+        <td align="center"><a href="http://720yun.com/t/e1f2exb8ayi" target="_blank"id="lianjie"></a></td>
+        <td align="center"><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"id="lianjie">网站特色</a></td>
+        <td align="center"><a href="https://github.com/byrwiki/byrwiki.github.io/wiki/%E4%BD%BF%E7%94%A8%E5%B8%AE%E5%8A%A9" target="_blank"id="lianjie">使用帮助</a></td>
+        <td align="center"><a href="http://byr-navi.com" target="_blank"id="lianjie">新版导航</a></td>
+        <td align="center"><a href="https://zhuanlan.zhihu.com/xiaxiaozheng" target="_blank"id="lianjie">知乎专栏</a></td>
+      </tr>
+		</thead>		
+	</table>					
+</table>
+
+</div>
+
+  <!--作者：i@zhangxingqiu.cn
+        时间：2016-10-03
+        描述：当前时间显示代码-->
+
+
+<ul class="nav nav-tabs" ">
+  <div id="footer">    
+  <center>
+  	 	  
+  	<div id="jnkc">
+
+      <script>setInterval("jnkc.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+      </script>
+      
+  	</div>
+  	
+  	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260446707'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260446707%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  	
+  	
+  	
+  </center>
+  </div>
+</ul>
+
+ <!--麒麟统计代码 -->
+ 
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72788532-6', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+
+
+<!--
+	作者：i@zhangxingqiu.cn
+	时间：2016-10-20
+	描述：搜索完整代码
+-->
+
+
+  <script charset="gbk" src="static/js/baidu.js"></script>
+  
+   
+  <script>
+    var sAddress=document.getElementsByTagName("form")[0];
+    var sInfor=document.getElementById("search");
+    var sBaidu=document.getElementById("baidu");
+    var sGoogle=document.getElementById("google");
+    var sGoogle1=document.getElementById("google1");
+    var sjd=document.getElementById("jd");
+    var stianmao=document.getElementById("tianmao");
+    var staobao=document.getElementById("taobao");
+    var sWeixin=document.getElementById("weixin");
+    var sZhihu=document.getElementById("zhihu");
+    var sweibo=document.getElementById("weibo");
+    var sdouban=document.getElementById("douban");
+    var sziyuan=document.getElementById("ziyuan");
+    var sditu=document.getElementById("ditu");
+    var sditu=document.getElementById("xueshu");
+    var squzhuanpan=document.getElementById("quzhuanpan");
+     
+
+    //百度
+    sBaidu.onclick=function(){
+      sAddress.action="https://baidu.com/";
+      sInfor.name="wd";
+    }
+    //Google
+    sGoogle.onclick=function(){
+      sAddress.action="https://arthearts1.zeabur.app/";
+      sInfor.name="q";
+    };
+    
+    //Google镜像  2017 年 2 月 11 日 更换
+   
+    $('#sougou').click(function() {
+      var query = $('#search').val();
+      if ( query ) {        window.open("https://console.cloud.google.com/storage/browser/nca_arthearts_cunchutong/2?inv=1&invt=Ab29Tg&project=arthearts-cf390&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))" + query , "_blank");
+        return false;
+      
+      };
+    });
+    
+    
+    //京东（已修复）在移动端访问会跳出两次窗口（已修复）
+   
+    $('#jd').click(function() {
+      var query = $('#search').val();
+      if ( query ) { window.open("https://www.youtube.com/" + query, "_blank");
+        return false;
+      };
+    });
+
+
+    //易图网  搜索需求下 暂时下架
+//  stianmao.onclick=function(){
+//    sAddress.action="https://www.yipic.cn/";
+//    sInfor.name="q";
+//    //sInfor.type="enc=utf-8";
+//  }
+    
+    //淘宝
+    staobao.onclick=function(){
+      sAddress.action="https://www.notion.so/22f8a4251f0080318bd0facd5fb136f1?v=22f8a4251f0080eb8513000c10d51dc5";
+      sInfor.name="q";
+    }
+    
+      //微信  恢复上线
+     $('#weixin').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("https://www.notion.so/2266167b6f1180258ab6cd8e8d5fae39?v=2266167b6f118070a75a000ce15258aa" + query + "&ie=utf8", "_blank");
+        return false;
+      
+      };
+    });
+
+    //知乎
+    sZhihu.onclick=function(){
+      sAddress.action="https://mail.google.com/mail/u/0/#inbox";
+      sInfor.name="q";
+      sInfor.type="question";
+    }
+//    //小霸王 （检索异常）
+//    sweibo.onclick=function(){
+//      sAddress.action="https://www.apizl.com/";
+//      //sInfor.name="q";
+//      //sInfor.type="question";
+//    }
+    $('#weibo').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("https://www.yikm.net/" + query, "_blank");
+        return false;
+      };
+    });
+
+    //公服
+    sdouban.onclick=function(){
+      sAddress.action="https://metahuman.unrealengine.com/";
+      sInfor.name="q";
+      //sInfor.type="question";
+    }
+        
+     //改用网易云音乐检索 移动端检索出现异常
+     
+//  $('#gequ').click(function() {
+//    var query = $('#search').val();
+//    if ( query ) {
+//      window.open("https://www.bitu360.com/" + query + "&type=1", "_blank");
+//      return false;
+//    
+//    };
+//  });
+    
+  
+
+
+
+// 20180425 更换网盘检索入口，采用网友推荐的58网盘搜索
+
+ $('#quzhuanpan').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("https://www.gname.com/user#/jie_info/ym=n8n.icu/dns=a.share-dns.com,b.share-dns.net");
+        return false;
+      
+      };
+    });
+
+
+
+
+
+    //新增疯狂影视搜索入口
+  
+$('#ziyuan').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("https://openai.com/" + query + "&p=1", "_blank");
+        return false;
+      
+      };
+    });
+
+-// 胖次  20180806 恢复胖次的使用，
+
+ $('#panci').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("https://www.zybuluo.com" + query + "/td_0", "_blank");
+        return false;
+      
+      };
+    });
+
+
+
+// 地图搜索
+
+ $('#ditu').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("https://ww.west.cn/manager/paimai/buyer.asp" + query + " ", "_blank");
+        return false;
+      
+      };
+    });
+
+// 根据网友建议，新增搜索入口：百度学术——7.12更新，下线学术搜索入口，更换为007网盘搜索入口
+
+ $('#xueshu').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("https://dash.cloudflare.com/bdf8c1f1045d6b7bb7179b9766520702/workers-and-pages" + query + " ", "_blank");
+        return false;
+      
+      };
+    });
+
+
+</script>
+
+
+  </script>
+  <link type="text/css" rel="stylesheet" href="static/css/myrewards.css">
+    <script>
+        window.tctipConfig = {
+        	//最上面的文字
+            headText: "欢迎访问麒麟导航",
+            //侧边栏文本
+            siderText: "公告栏",
+            //侧边栏文本高度调整
+            siderTextTop: "-72px",
+            //侧边栏背景颜色
+            siderBgcolor: "#323d45",
+            //整个侧边栏的高度设置可以px，em，或百分比
+            siderTop:"118px",
+            //底部文字
+            buttomText:"点此关注作者知乎",
+                      buttomLink:"http://link.fobshanghai.com/rgbcolor.htm",
+ 
+            
+            list:{
+                notice: {icon: "http://yun.zhangxingqiu.cn/byrwiki/tip.png", name:"网站公告", className:"myR-on", text:'麒麟导航自2016年9月23日上线至2017年6月10日，累计页面浏览已超 360W，累计访问用户超 150W，感谢一路有你！即将迎来上线两周年，敬请期待！'},
+                              
+               alipay: {icon: "http://yun.zhangxingqiu.cn/byrwiki/alipay.png", name:"资助我们", desc: "你的每一份支持，都能够让我们把麒麟导航做得更好", qrimg: "http://yun.zhangxingqiu.cn/byrwiki/alipay.jpg"},
+                weixin: {icon: "http://yun.zhangxingqiu.cn/byrwiki/weixin.png", name:"微信公号", desc: "关注站长个人微信公众号【小正说事】", qrimg: "http://yun.zhangxingqiu.cn/byrwiki/gonghao.jpg"}	
+                             
+                                
+            }
+        };
+    </script>
+    <script src="static/js/tctip.min.js"></script>
+
+
+
+  
+
+</html>
