@@ -12,92 +12,33 @@
     <link rel="icon" href="image/logo.png">
     <link rel="apple-touch-icon" href="image/logo-black.png">
     <link rel="manifest" href="manifest.json">
-
+    
     <script src="libs/tailwindcss.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <header class="py-4 shadow-md bg-white">
-        <div class="container mx-auto flex items-center justify-between px-4">
-            <a href="index.html" class="flex items-center">
-                <img src="image/logo-black.png" alt="小姜姜影视 Logo" class="h-10 w-auto mr-2">
-                <span class="text-xl font-semibold">小姜姜影视</span>
-            </a>
+<body>
+
+<!-- 动态插入广告条的脚本 -->
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const bar = document.createElement("div");
+    bar.id = "topAdBar";
+    bar.innerHTML = `
+      <div class="w-full bg-yellow-300 text-black text-center py-2 px-4 text-sm fixed top-0 left-0 z-50 shadow-md flex justify-between items-center">
+        <div class="text-sm">
+          🎬 热门影片推荐每日更新！<a href="https://example.com" target="_blank" class="underline font-semibold ml-2">点我立即观看</a>
         </div>
-    </header>
+        <button onclick="document.getElementById('topAdBar').remove();document.body.style.paddingTop='0'" class="ml-4 text-black text-lg font-bold hover:text-gray-600">&times;</button>
+      </div>
+    `;
+    document.body.prepend(bar);
+    document.body.style.paddingTop = "48px"; // 防止页面被广告遮住
+  });
+</script>
 
-    <main class="container mx-auto px-4 py-8">
-        <div class="text-center">
-            <h1 class="text-3xl font-bold mb-4">搜索你想看的视频</h1>
-            <p class="mb-6 text-lg text-gray-700">在多个平台中聚合搜索，轻松发现精彩内容</p>
+<!-- 原页面其他内容 -->
+<!-- ...你后续的内容继续写在下面... -->
 
-            <!-- 🔍 搜索栏 -->
-            <div class="flex justify-center mb-8">
-                <input type="text" placeholder="输入视频名称..." class="w-full max-w-xl px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none">
-                <button class="bg-blue-500 text-white px-6 py-2 rounded-r-md hover:bg-blue-600">搜索</button>
-            </div>
-
-            <!-- 📢 广告轮播条 -->
-            <div class="mb-8">
-                <div id="ad-carousel" class="relative w-full max-w-3xl mx-auto overflow-hidden rounded shadow-md">
-                    <div class="carousel-images transition-all duration-700 ease-in-out">
-                        <img src="image/ad1.jpg" alt="广告1" class="w-full object-cover block">
-                        <img src="image/ad2.jpg" alt="广告2" class="w-full object-cover hidden">
-                        <img src="image/ad3.jpg" alt="广告3" class="w-full object-cover hidden">
-                    </div>
-                    <button id="prevAd" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/80 px-2 py-1 rounded hover:bg-white">←</button>
-                    <button id="nextAd" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/80 px-2 py-1 rounded hover:bg-white">→</button>
-                </div>
-            </div>
-
-            <!-- 推荐内容区域 -->
-            <section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <!-- 示例视频卡片 -->
-                <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-2">
-                    <img src="image/sample.jpg" alt="示例视频" class="w-full h-32 object-cover rounded">
-                    <p class="mt-2 text-sm">示例视频标题</p>
-                </div>
-                <!-- 更多视频卡片... -->
-            </section>
-        </div>
-    </main>
-
-    <footer class="bg-white py-6 mt-12 text-center text-gray-500 text-sm">
-        © 2025 小姜姜影视. 保留所有权利.
-    </footer>
-
-    <!-- 🚀 广告轮播脚本 -->
-    <script>
-        const carousel = document.querySelector('#ad-carousel .carousel-images');
-        const images = carousel.querySelectorAll('img');
-        const prevBtn = document.getElementById('prevAd');
-        const nextBtn = document.getElementById('nextAd');
-        let current = 0;
-
-        function updateCarousel() {
-            images.forEach((img, i) => {
-                img.classList.toggle('hidden', i !== current);
-                img.classList.toggle('block', i === current);
-            });
-        }
-
-        prevBtn.addEventListener('click', () => {
-            current = (current - 1 + images.length) % images.length;
-            updateCarousel();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            current = (current + 1) % images.length;
-            updateCarousel();
-        });
-
-        setInterval(() => {
-            current = (current + 1) % images.length;
-            updateCarousel();
-        }, 5000);
-
-        updateCarousel();
-    </script>
 </body>
 </html>
